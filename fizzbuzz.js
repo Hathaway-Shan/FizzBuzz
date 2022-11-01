@@ -34,6 +34,11 @@ function fizzBuzz(num) {
 fizzBuzz(100);
 
 function fizzBuzzTerminal(num) {
+  //guard for correct input of function
+  if (typeof num !== "number") {
+    throw new Error("FizzBuzz input must be a number");
+  }
+
   for (i = 1; i <= num; i++) {
     let output = "";
 
