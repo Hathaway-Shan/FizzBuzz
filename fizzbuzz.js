@@ -1,5 +1,9 @@
 //the program writes the numbers 1 through 100
 function fizzBuzz(num) {
+  //guard for correct input type
+  if (typeof num !== "number") {
+    throw new Error("FizzBuzz input must be a number");
+  }
   for (i = 1; i <= num; i++) {
     // console.log("i is: ", i); //prints 'i is: 1-100
     //if a number is evenly divisible by both 3 and 5 instead of writing the number write the string 'fizzbuzz'
@@ -19,14 +23,3 @@ function fizzBuzz(num) {
   }
 }
 fizzBuzz(100);
-
-// function fizzBuzzSwitch(num) {
-//   for (i = 1; i <= num; i++) {
-//     switch (i) {
-//       case i % 15 === 0:
-//         console.log(fizzbuzz);
-//     }
-//   }
-// }
-
-// fizzBuzzSwitch(45);
