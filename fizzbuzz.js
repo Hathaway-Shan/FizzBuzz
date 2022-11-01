@@ -32,3 +32,30 @@ function fizzBuzz(num) {
   display.appendChild(ul);
 }
 fizzBuzz(100);
+
+function fizzBuzzTerminal(num) {
+  for (i = 1; i <= num; i++) {
+    let output = "";
+
+    if (i % 3 === 0) {
+      output += "Fizz";
+      console.log(i, output);
+    }
+    if (i % 5 === 0) {
+      output += "Buzz";
+      console.log(i, output);
+    }
+    if (i % 7 === 0) {
+      output += "Foo";
+      console.log(i, output);
+    }
+    if (i % 11 === 0) {
+      output += "Bar";
+      console.log(i, output);
+    }
+    if (output === "") {
+      console.log(i);
+    }
+  }
+}
+fizzBuzzTerminal(100);
